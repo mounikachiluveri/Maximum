@@ -5,24 +5,41 @@ public class MaximumNumberTest
     @Test
     public void givenIntegerAtFirstNumberMax_ShouldReturnTrue() {
         MaximumNumber maximumNumber = new MaximumNumber();
-        Integer first=92;
-        Integer maximum=maximumNumber.testMaximun(92, 12, 34);
-        Assert.assertEquals(first,maximum);
+        int maximum=maximumNumber.testMaximum(92, 12, 34);
+        Assert.assertEquals(92,maximum);
     }
 
     @Test
     public void givenIntegerAtSecondNumberMax_ShouldReturnTrue() {
         MaximumNumber maximumNumber = new MaximumNumber();
-        Integer second=95;
-        Integer maximum=maximumNumber.testMaximun(12, 95, 34);
-        Assert.assertEquals(second,maximum);
+         int maximum=maximumNumber.testMaximum(12, 95, 34);
+        Assert.assertEquals(95,maximum);
     }
 
     @Test
     public void givenIntegerAtThirdNumberMax_ShouldReturnTrue() {
         MaximumNumber maximumNumber = new MaximumNumber();
-        Integer Third=87;
-        Integer maximum=maximumNumber.testMaximun(12, 34, 87);
-        Assert.assertEquals(Third,maximum);
+        int maximum=maximumNumber.testMaximum(12, 34, 87);
+        Assert.assertEquals(87,maximum);
+    }
+
+    @Test
+    public void givenFloatAtFirstNumberMax_ShouldReturnTrue() {
+        MaximumNumber maximumNumber = new MaximumNumber();
+        float maximum=maximumNumber.testMaximum(12.0f, 11.0f, 10.0f);
+        Assert.assertEquals(12.0f,maximum,0.0);
+    }
+
+    @Test
+    public void givenFloatAtSecondNumberMax_ShouldReturnTrue() {
+        MaximumNumber maximumNumber = new MaximumNumber();
+        float maximum=maximumNumber.testMaximum(11.0f, 12.0f, 10.0f);
+        Assert.assertEquals(12.0f,maximum,0.0);
+    }
+    @Test
+    public void givenFloatAtThirdNumberMax_ShouldReturnTrue() {
+        MaximumNumber maximumNumber = new MaximumNumber();
+        float maximum=maximumNumber.testMaximum(11.0f, 10.0f, 12.0f);
+        Assert.assertEquals(12.0f,maximum,0.0);
     }
 }
