@@ -19,7 +19,18 @@ public class MaximumNumber {
         }
         return max;
     }
+    public static String testMaximum(String X, String Y, String Z) {
+        String max = X;
+        if (Y.compareTo(max) > 0) {
+            max = Y;
+        }
+        if (Z.compareTo(max) > 0) {
+            max = Z;
+        }
+        return max;
+    }
 }
+
 
 
 
